@@ -1,0 +1,79 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ * 
+ */
+
+/*# sourceMappingURL=custom.css.map */
+
+.main-content,
+.main-footer {
+	transition: unset;
+}
+
+#select2-tagsSelect-results {
+	display: none !important;
+}
+
+.select2-selection__choice {
+	background-color: var(--success) !important;
+	border-radius: 50rem !important;
+	border: unset !important;
+	margin-top: 0px !important;
+}
+
+.select2-selection {
+	display: flex !important;
+	align-items: center !important;
+}
+
+.select2-selection__rendered {
+	display: inherit !important;
+	align-items: inherit;
+}
+
+.btn-icon-custom {
+	border: none;
+	padding: 3.5px;
+}
+
+.btn-icon-custom .fas {
+	margin: 3.5px !important;
+	font-size: 1.5rem !important;
+}
+
+.alert .close {
+	line-height: unset;
+}
+
+.modal {
+	padding-right: unset !important;
+}
+
+div.dataTables_processing.card {
+	position: fixed !important;
+	box-shadow: 0 1px 30px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+}
+
+.dataTable thead,
+.section-header,
+.section-title,
+.nav-link[data-toggle="tab"] {
+	text-transform: capitalize;
+}
+
+.hoverable:hover {
+	background-color: #EAEAEA;
+}
+
+.blinking {
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0.5;
+	}
+}

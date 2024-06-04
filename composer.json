@@ -1,0 +1,77 @@
+{
+    "name": "sensasi-app/sensasi-logistic",
+    "type": "project",
+    "description": "Is a web based management information system app for managing manufacture inventory.",
+    "keywords": [
+        "framework",
+        "logistic",
+        "mis",
+        "sensasi-delight"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "jakyeru/laravel-shell": "^1.1",
+        "jenssegers/agent": "^2.6",
+        "laravel/framework": "^11.0",
+        "laravel/sanctum": "^4.0",
+        "laravel/socialite": "^5.5",
+        "laravel/tinker": "^2.7",
+        "recca0120/terminal": "^1.11",
+        "sentry/sentry-laravel": "^3.0",
+        "spatie/laravel-backup": "^8.1",
+        "spatie/laravel-permission": "^5.5",
+        "yajra/laravel-datatables-oracle": "^9.21"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
+        "spatie/laravel-ignition": "^1.0",
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^8.1",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
